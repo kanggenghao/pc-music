@@ -1,0 +1,203 @@
+@import "../css/normalize.css";
+@import "../iconfont/iconfont.css";
+@import "../iconfont/colorfont.css";
+@import "../css/element.css";
+
+:root {
+	--mycompColor: #5292fe;
+	/*自定义组件主题色*/
+	--themeColor: #409eff;
+	/*主题色*/
+	--themeRgba: rgba(64, 158, 255, 0.8);
+	--tagRgba: rgba(100, 149, 237, 0.2);
+	/*标签导航背景色*/
+	--base-black: #000000;
+	--info-color: #909399;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+	font-style: normal;
+}
+
+/* 去掉li 的小圆点 */
+li {
+	list-style: none;
+}
+
+img {
+	/* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+	border: 0;
+	/* 取消图片底侧有空白缝隙的问题 */
+	vertical-align: middle;
+	/* border-radius: 10px; */
+	cursor: pointer;
+}
+
+button {
+	/* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	color: #5292fe;
+}
+
+button,
+input {
+	/* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
+	font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+	outline: none;
+}
+
+body,
+html {
+	/* CSS3 抗锯齿形 让文字显示的更加清晰 */
+	-webkit-font-smoothing: antialiased;
+	background-color: #fff;
+	font: 14px Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+	/* Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, 微软雅黑, Arial, sans-serif */
+	color: #303133;
+	/* 禁止选中文字 */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.hide,
+.none {
+	display: none;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+	visibility: hidden;
+	clear: both;
+	display: block;
+	content: ".";
+	height: 0;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: var(--base-black);
+}
+
+/* 不主要的文字 */
+.by {
+	color: var(--info-color);
+	font-size: 12px;
+}
+
+/* 版心 */
+.w {
+	width: 1200px;
+	margin: 20px auto;
+}
+
+.oneLine {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.twoLine {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+
+/* 播放图标遮罩层 */
+.mask-playicon {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(100, 100, 100, 0.3);
+	z-index: 2;
+}
+
+.mask-playicon .icon-play {
+	background-color: var(--themeColor);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	padding-left: 2px;
+}
+
+/* 分页器 */
+.page {
+	display: flex;
+	width: 100%;
+	padding-top: 20px;
+	justify-content: center;
+}
+
+/* 图片模糊效果 */
+.bgImg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	transform: translate(15px, 15px);
+	filter: blur(25px) brightness(70%);
+}
+
+.search-input .el-input__inner {
+	border: 0 !important;
+}
+
+/*
+滚动条 
+ */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 12px;
+	/* background-color: #fff; */
+}
+
+::-webkit-scrollbar-thumb {
+	display: block;
+	min-height: 12px;
+	min-width: 5px;
+	border-radius: 6px;
+	background-color: rgb(217, 217, 217);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	display: block;
+	min-height: 12px;
+	min-width: 5px;
+	border-radius: 6px;
+	background-color: rgb(159, 159, 159);
+}

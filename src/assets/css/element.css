@@ -1,0 +1,110 @@
+/* 热搜弹框 */
+.el-popover {
+	padding: 0 0 0 0 !important;
+}
+
+/* el表格绑定样式 */
+.el-table .rowEven {
+	background: #f9f9f9;
+}
+
+/* 去除el-tabs的底部边框 */
+.el-tabs__nav-wrap::after {
+	width: 0 !important;
+}
+
+/* 去除el表格单元格边框 */
+.el-table--border tr,
+td {
+	border: none !important;
+}
+.el-table::before {
+	height: 0 !important;
+}
+/* 修改鼠标经过时背景色 */
+.el-table tbody tr:hover > td {
+	background-color: #eee !important;
+}
+
+/* ele主题色 */
+/* 按钮 */
+.el-button--default:hover {
+	color: #606266 !important;
+	background: rgb(220, 223, 230, 0.3) !important;
+	border: 1px solid #dcdfe6 !important;
+}
+.el-button--default:focus {
+	color: #606266 !important;
+	background: rgb(220, 223, 230, 0.3) !important;
+	border: 1px solid #dcdfe6 !important;
+}
+.el-button--primary {
+	color: #fff;
+	background-color: var(--themeColor) !important;
+	border-color: var(--themeColor) !important;
+}
+.el-message-box .el-button--primary {
+	color: #fff !important;
+	background-color: var(--themeColor) !important;
+	border-color: var(--themeColor) !important;
+}
+.el-message-box__headerbtn .el-icon-close:hover {
+	color: var(--themeColor) !important;
+}
+/* 输入框 */
+.el-input__inner:focus,
+.el-textarea__inner:focus {
+	border-color: #a9a9a9 !important;
+}
+/* 标签 */
+.el-tag--light {
+	background-color: var(--tagRgba) !important;
+	border-color: var(--tagRgba) !important;
+	color: var(--themeColor) !important;
+}
+.el-tag--plain {
+	background-color: #fff;
+	border-color: var(--themeColor) !important;
+	color: var(--themeColor) !important;
+}
+/* tabs */
+.el-tabs__item:hover {
+	color: var(--themeColor) !important;
+}
+.el-tabs__item.is-active {
+	color: var(--themeColor) !important;
+}
+.el-tabs__active-bar {
+	background-color: var(--themeColor) !important;
+}
+/* 分页 */
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+	background-color: var(--themeColor) !important;
+	color: #fff;
+}
+.el-pagination.is-background .el-pager li:not(.active):hover {
+	color: var(--themeColor) !important;
+}
+/* 进度条 */
+.el-slider__bar {
+	background-color: var(--themeColor) !important;
+}
+.el-slider__button {
+	border: 2px solid var(--themeColor) !important;
+}
+/* loading动画 */
+.el-loading-spinner .el-loading-text {
+	color: var(--themeColor) !important;
+}
+.el-loading-spinner .path {
+	stroke: var(--themeColor) !important;
+}
+/* 返回顶部按钮 */
+.el-backtop {
+	width: 45px !important;
+	height: 45px !important;
+	box-shadow: 0 0 6px rgb(0 0 0 / 24%) !important;
+}
+.el-icon-caret-top {
+	color: var(--themeColor);
+}
